@@ -6,7 +6,7 @@ import com.intellij.openapi.project.Project
 import com.github.tmaitz.graphqlgeneratorplugin.MyBundle
 
 @Service(Service.Level.PROJECT)
-class MyProjectService(project: Project) {
+class GraphqlIntrospectionProjectService(project: Project) {
 
     init {
         thisLogger().info(MyBundle.message("projectService", project.name))

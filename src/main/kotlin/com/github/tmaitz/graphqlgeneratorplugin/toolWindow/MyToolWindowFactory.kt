@@ -9,7 +9,7 @@ import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPanel
 import com.intellij.ui.content.ContentFactory
 import com.github.tmaitz.graphqlgeneratorplugin.MyBundle
-import com.github.tmaitz.graphqlgeneratorplugin.services.MyProjectService
+import com.github.tmaitz.graphqlgeneratorplugin.services.GraphqlIntrospectionProjectService
 import javax.swing.JButton
 
 
@@ -29,7 +29,7 @@ class MyToolWindowFactory : ToolWindowFactory {
 
     class MyToolWindow(toolWindow: ToolWindow) {
 
-        private val service = toolWindow.project.service<MyProjectService>()
+        private val service = toolWindow.project.service<GraphqlIntrospectionProjectService>()
 
         fun getContent() = JBPanel<JBPanel<*>>().apply {
             val label = JBLabel(MyBundle.message("randomLabel", "?"))
